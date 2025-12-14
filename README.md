@@ -34,7 +34,7 @@ JWT_SECRET=your_jwt_secret
 ```
 4. Start the backend server:
 ```bash
-npm start
+npm run dev
 ```
 ### Frontend Setup
 
@@ -48,7 +48,7 @@ npm install
 ```
 3. Start the React app:
 ```bash
-npm start
+npm run dev
 ```
 
 # API Endpoints
