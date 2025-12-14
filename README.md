@@ -1,16 +1,58 @@
-# React + Vite
+# Instagram Clone (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple Instagram-like social media app built with:
+- React (frontend)
+- Node.js + Express (backend)
+- MongoDB (database)
 
-Currently, two official plugins are available:
+## Features
+- User signup/login with JWT authentication
+- Create, like, comment posts
+- Follow users and feed functionality
+- Cloudinary image upload
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## React Compiler
+### Prerequisites
+- Node.js and npm installed
+- MongoDB running locally or cloud (MongoDB Atlas)
+- Cloudinary account for image uploads
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend Setup
+1. Navigate to the backend folder:
+   ```bash
+   cd backend
+   ```
+Install dependencies:
+```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Create a .env file with the following variables:
+```bash
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+Start the backend server:
+
+```bash
+npm start
+```
+Frontend Setup
+
+Navigate to the frontend folder:
+```bash
+cd frontend
+```
+
+Install dependencies:
+```bash
+npm install
+```
+
+Start the React app:
+
+npm start
