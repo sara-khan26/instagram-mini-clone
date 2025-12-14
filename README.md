@@ -23,36 +23,75 @@ This project is a simple Instagram-like social media app built with:
    ```bash
    cd backend
    ```
-Install dependencies:
+2. Install dependencies:
 ```bash
    npm install
    ```
-
-
-
-Create a .env file with the following variables:
+3. Create a .env file with the following variables:
 ```bash
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 ```
-
-Start the backend server:
-
+4. Start the backend server:
 ```bash
 npm start
 ```
-Frontend Setup
+### Frontend Setup
 
-Navigate to the frontend folder:
+1. Navigate back to the frontend folder:
 ```bash
-cd frontend
+cd ../
 ```
-
-Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 ```
-
-Start the React app:
-
+3. Start the React app:
+```bash
 npm start
+```
+
+# API Endpoints
+
+## Authentication
+- **POST** `/auth/signup`  
+  Register a new user by providing `username`, `email`, and `password`.
+
+- **POST** `/auth/login`  
+  Login a user with `email` and `password`. Returns a JWT token upon success.
+
+---
+
+## User
+- **GET** `/users/me`  
+  Get the profile details of the authenticated user.
+
+- **GET** `/users/suggested`  
+  Retrieve a list of suggested users to follow.
+
+- **POST** `/users/follow/:userId`  
+  Follow a user specified by `userId`.
+
+---
+
+## Posts
+- **GET** `/feed`  
+  Get the posts feed consisting of posts from followed users.
+
+- **GET** `/posts/user/:userId`  
+  Fetch all posts created by the user with the given `userId`.
+
+- **POST** `/posts`  
+  Create a new post by uploading an image URL and a caption.
+
+- **POST** `/posts/:postId/like`  
+  Toggle like/unlike on a post identified by `postId`.
+
+- **POST** `/posts/:postId/comment`  
+  Add a comment to the post identified by `postId`.
+
+- **GET** `/posts/:id`  
+  Retrieve a specific post along with its comments.
+
+---
+
