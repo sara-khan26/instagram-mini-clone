@@ -33,10 +33,9 @@ const CreatePost = () => {
     setLoading(true);
 
     try {
-      // 1️⃣ Upload image
+    
       const imageUrl = await uploadImageToCloudinary();
 
-      // 2️⃣ Save post
       await api.post("/posts", { imageUrl, caption });
 
       alert("Post Created");
