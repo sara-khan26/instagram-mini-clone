@@ -11,7 +11,6 @@ const App = () => (
   <BrowserRouter>
     <Routes>
 
-      {/* 👇 DEFAULT ROUTE */}
       <Route path="/" element={<Navigate to="/login" />} />
 
       <Route path="/login" element={<Login />} />
